@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gubendhiran J | AI & ML, Python & Full Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Gubendhiran J, an AI & ML, Python, and Full Stack Developer pursuing B.Tech in AI & DS at Hindusthan Institute of Technology.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Gubendhiran<span>.J</span></a>
+            <div class="nav-toggle" id="nav-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#academics" class="nav-link">Academics</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Internships</a></li>
+                <li><a href="#achievements-certificates" class="nav-link">Credentials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-btn hire-me-btn pulse-glow">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home (Hero) Section -->
+    <section id="home" class="hero-section">
+        <div class="tech-bg">
+            <div class="tech-dot dot-1"></div>
+            <div class="tech-dot dot-2"></div>
+            <div class="tech-dot dot-3"></div>
+            <div class="tech-dot dot-4"></div>
+            <div class="tech-dot dot-5"></div>
+        </div>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="section-container hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">Welcome to my space</div>
+                <h1 class="hero-title">Hi, I am <span class="text-gradient">Gubendhiran J</span></h1>
+                <h2 class="hero-subtitle">I'm a <span id="typewriter" class="typewriter"></span><span
+                        class="cursor">|</span></h2>
+                <p class="hero-description">
+                    Pursuing B.Tech in Artificial Intelligence & Data Science (AI&DS) at Hindusthan Institute of
+                    Technology, Coimbatore. Specializing in Python engineering, custom Machine Learning architectures,
+                    and modern Full Stack web platforms.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary hire-me-main">
+                        <i data-lucide="send" class="btn-icon"></i>Hire Me
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i data-lucide="briefcase" class="btn-icon"></i>View Projects
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/GUBENDHIRAN2006" target="_blank" aria-label="GitHub"
+                        class="social-icon-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-github">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gubendhiran-j-1abb302a3" target="_blank" aria-label="LinkedIn"
+                        class="social-icon-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-linkedin">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual" id="hero-visual-container">
+                <div class="avatar-ring" id="default-hero-avatar">
+                    <div class="ring-core">
+                        <i data-lucide="cpu" class="visual-core-icon"></i>
+                    </div>
+                    <div class="orbit orbit-1">
+                        <div class="orbit-node node-python"><i data-lucide="code-2"></i></div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="orbit-node node-ai"><i data-lucide="brain-circuit"></i></div>
+                    </div>
+                    <div class="orbit orbit-3">
+                        <div class="orbit-node node-web"><i data-lucide="globe"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scroll-reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="sub-title">Who I Am</span>
+                <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card premium-card">
+                    <div class="card-icon-wrapper">
+                        <i data-lucide="brain-circuit"></i>
+                    </div>
+                    <h3>AI & ML Developer</h3>
+                    <p>Fascinated by predictive models and data-driven intelligence. I design, train, and optimize
+                        supervised and unsupervised architectures. Experienced in applying Deep Learning and Computer
+                        Vision algorithms (PyTorch, TensorFlow, YOLO, OpenCV) to engineer data and extract practical
+                        intelligence.</p>
+                </div>
+
+                <div class="about-card premium-card">
+                    <div class="card-icon-wrapper">
+                        <i data-lucide="terminal"></i>
+                    </div>
+                    <h3>Python Architect</h3>
+                    <p>Leveraging Python as my core development language. I build clean, high-performance backends,
+                        automate analytical scripts, and program GPU-accelerated computing modules using CUDA. Strong
+                        capability in handling numerical frameworks and deploying quick web-based interfaces with
+                        Streamlit and Flask.</p>
+                </div>
+
+                <div class="about-card premium-card">
+                    <div class="card-icon-wrapper">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3>Full Stack Developer</h3>
+                    <p>Bridging the gap between intelligent algorithms and responsive user interfaces. I build
+                        interactive client applications backed by structured SQL/NoSQL databases, writing robust REST
+                        APIs and modular frontend logic to present data elegantly to end users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="academics-section scroll-reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="sub-title">My Journey</span>
+                <h2 class="section-title">Academic <span class="text-gradient">Background</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="academics-timeline">
+                <!-- Academic Card 1 -->
+                <div class="academic-card premium-card">
+                    <div class="academic-badge">Currently Pursuing</div>
+                    <div class="academic-meta">
+                        <div class="degree-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="degree-info">
+                            <h3>B.Tech in Artificial Intelligence & Data Science</h3>
+                            <p class="institution">Hindusthan Institute of Technology, Coimbatore</p>
+                        </div>
+                    </div>
+                    <div class="grade-pill">
+                        <span class="label">CGPA</span>
+                        <span class="value text-gradient">8.1 / 10</span>
+                    </div>
+                    <p class="card-text">Specializing in foundational core concepts of machine learning, automated
+                        intelligence, advanced statistics, databases, and structural coding practices for algorithmic
+                        implementation.</p>
+                </div>
+
+                <!-- Academic Card 2 -->
+                <div class="academic-card premium-card">
+                    <div class="academic-badge badge-completed">Completed</div>
+                    <div class="academic-meta">
+                        <div class="degree-icon">
+                            <i data-lucide="school"></i>
+                        </div>
+                        <div class="degree-info">
+                            <h3>12th Grade (Higher Secondary)</h3>
+                            <p class="institution">Govt Boys Higher Secondary School, Udumalpet</p>
+                        </div>
+                    </div>
+                    <div class="grade-pill">
+                        <span class="label">Percentage</span>
+                        <span class="value text-gradient">82%</span>
+                    </div>
+                    <p class="card-text">Completed my high school curriculum under the state board, emphasizing advanced
+                        mathematical disciplines, computer science, and core science modules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section scroll-reveal">
+        <div class="tech-bg">
+            <div class="tech-dot dot-1"></div>
+            <div class="tech-dot dot-2"></div>
+            <div class="tech-dot dot-3"></div>
+            <div class="tech-dot dot-4"></div>
+            <div class="tech-dot dot-5"></div>
+        </div>
+        <div class="section-container">
+            <div class="section-header">
+                <span class="sub-title">Expertise</span>
+                <h2 class="section-title">My <span class="text-gradient">Skills</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skills-card premium-card">
+                    <div class="skills-card-header">
+                        <i data-lucide="code-2"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">R</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">MYSQL</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skills-card premium-card">
+                    <div class="skills-card-header">
+                        <i data-lucide="brain"></i>
+                        <h3>Machine Learning & AI</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge">Supervised Learning</span>
+                        <span class="skill-badge">Unsupervised Learning</span>
+                        <span class="skill-badge">Model Training & Evaluation</span>
+                        <span class="skill-badge">Feature Engineering</span>
+                        <span class="skill-badge">Data Preprocessing</span>
+                        <span class="skill-badge">Computer Vision</span>
+                        <span class="skill-badge">Deep Learning</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skills-card premium-card">
+                    <div class="skills-card-header">
+                        <i data-lucide="library"></i>
+                        <h3>Libraries & Frameworks</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge">CUDA / GPU Programming</span>
+                        <span class="skill-badge">Scikit-learn</span>
+                        <span class="skill-badge">OpenCV</span>
+                        <span class="skill-badge">Matplotlib</span>
+                        <span class="skill-badge">Seaborn</span>
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">PyTorch</span>
+                        <span class="skill-badge">YOLO</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="skills-card premium-card">
+                    <div class="skills-card-header">
+                        <i data-lucide="server"></i>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge">VS Code</span>
+                        <span class="skill-badge">PyCharm</span>
+                        <span class="skill-badge">Jupyter Notebook</span>
+                        <span class="skill-badge">Google Colab</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitHub</span>
+                        <span class="skill-badge">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 5 -->
+                <div class="skills-card premium-card">
+                    <div class="skills-card-header">
+                        <i data-lucide="database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge">SQLite</span>
+                        <span class="skill-badge">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 6 -->
+                <div class="skills-card premium-card">
+                    <div class="skills-card-header">
+                        <i data-lucide="rocket"></i>
+                        <h3>Visualization & Deployment</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-badge">Matplotlib</span>
+                        <span class="skill-badge">Seaborn</span>
+                        <span class="skill-badge">Streamlit</span>
+                        <span class="skill-badge">Flask (Basic)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section scroll-reveal">
+        <div class="tech-bg">
+            <div class="tech-dot dot-1"></div>
+            <div class="tech-dot dot-2"></div>
+            <div class="tech-dot dot-3"></div>
+            <div class="tech-dot dot-4"></div>
+            <div class="tech-dot dot-5"></div>
+        </div>
+        <div class="section-container">
+            <div class="section-header">
+                <span class="sub-title">My Works</span>
+                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="project-grid" id="project-grid">
+                <!-- Project cards loaded dynamically or hardcoded with filter classes -->
+                <!-- Dynamic loading of projects inside app.js allows cleaner maintenance -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section id="experience" class="experience-section scroll-reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="sub-title">Hands-On Experience</span>
+                <h2 class="section-title">My <span class="text-gradient">Internships</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="internship-container" id="internship-container">
+                <div class="internship-card premium-card">
+                    <div class="internship-badge">Valuable Experience</div>
+                    <div class="internship-header">
+                        <div class="company-logo">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <div class="internship-title-group">
+                            <h3>LearnFlu</h3>
+                            <h4>AI & Machine Learning Internship</h4>
+                        </div>
+                        <div class="internship-meta">
+                            <span class="meta-item"><i data-lucide="calendar"></i> Jun 2025 – Sep 2025</span>
+                            <span class="meta-item"><i data-lucide="map-pin"></i> Bengaluru, India
+                                (Remote/Hybrid)</span>
+                        </div>
+                    </div>
+                    <div class="internship-details">
+                        <h5>About the Role & Responsibilities:</h5>
+                        <ul class="internship-bullets">
+                            <li>Acquired comprehensive, hands-on experience in building and thoroughly evaluating
+                                machine learning models using Python for real-world analytical tasks.</li>
+                            <li>Implemented custom preprocessing pipelines, handled missing data, and developed
+                                predictive architectures using standard scientific libraries.</li>
+                            <li>Employed regression, classification, and validation methods to improve reliability and
+                                model outputs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combined Achievements & Certificates Section -->
+    <section id="achievements-certificates" class="achievements-section scroll-reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="sub-title">Verified Credentials</span>
+                <h2 class="section-title">Achievements & <span class="text-gradient">Certificates</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Credentials Layout: Left achievements, Right certificates -->
+            <div class="credentials-layout">
+                <!-- Achievements Panel -->
+                <div class="credentials-panel">
+                    <div class="panel-header">
+                        <i data-lucide="award"></i>
+                        <h3>Achievements</h3>
+                    </div>
+                    <div class="achievements-list" id="achievements-list">
+                        <div class="achievement-item premium-card">
+                            <div class="achievement-icon"><i data-lucide="trophy"></i></div>
+                            <div class="achievement-info">
+                                <h4>Academic Excellence Honor Roll</h4>
+                                <p>Maintained a robust average CGPA of 8.1 throughout the B.Tech in AI & Data Science
+                                    coursework, ranking among the top students in technical classes.</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item premium-card">
+                            <div class="achievement-icon"><i data-lucide="code"></i></div>
+                            <div class="achievement-info">
+                                <h4>Hackathon Technical Finalist</h4>
+                                <p>Successfully conceptualized and integrated custom machine learning and vision
+                                    pipelines under tight deadlines during inter-collegiate technical challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificates Panel -->
+                <div class="credentials-panel">
+                    <div class="panel-header">
+                        <i data-lucide="file-check-2"></i>
+                        <h3>Certificates</h3>
+                    </div>
+                    <!-- Certificates Grid -->
+                    <div class="certificates-grid" id="certificates-grid">
+                        <!-- Dynamic content filled by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll-reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="sub-title">Get In Touch</span>
+                <h2 class="section-title">Contact <span class="text-gradient">Me</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Cards -->
+                <div class="contact-info-panel">
+                    <div class="contact-info-card premium-card">
+                        <div class="info-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <span>Call Me</span>
+                            <a href="tel:8056830971">+91 8056830971</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card premium-card">
+                        <div class="info-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="info-content">
+                            <span>Email Me</span>
+                            <a href="mailto:gubendhiran0710@gmail.com">gubendhiran0710@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card premium-card">
+                        <div class="info-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="info-content">
+                            <span>Location</span>
+                            <p>Udumalpet / Coimbatore, Tamil Nadu, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card premium-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-linkedin">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect width="4" height="12" x="2" y="9" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <span>LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/gubendhiran-j-1abb302a3" target="_blank">Connect on
+                                LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card premium-card">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-github">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <span>GitHub</span>
+                            <a href="https://github.com/GUBENDHIRAN2006" target="_blank">Follow on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card premium-card">
+                    <form id="contact-form" class="contact-form"
+                        action="https://formsubmit.co/gubendhiran0710@gmail.com" method="POST">
+                        <!-- Custom FormSubmit Configs -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" name="email" placeholder="john@example.com"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" name="subject" placeholder="Project Discussion"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" name="message" rows="5"
+                                placeholder="Let's build something awesome together..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full pulse-glow">
+                            <i data-lucide="send"></i> Send Message
+                        </button>
+                    </form>
+                    <div id="form-feedback" class="form-feedback hidden"></div>
+
+                    <!-- Social Quick Contact -->
+                    <div class="social-quick-contact">
+                        <span class="quick-contact-title">Or connect directly via:</span>
+                        <div class="quick-contact-buttons">
+                            <a href="https://wa.me/918056830971" target="_blank" class="quick-contact-btn whatsapp"
+                                title="Chat on WhatsApp">
+                                <i data-lucide="message-circle"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://www.instagram.com/guru_.2006?igsh=MWQxZ2hubHUzNXcw" target="_blank"
+                                class="quick-contact-btn instagram" title="Follow on Instagram">
+                                <i data-lucide="instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://x.com/gubendhiran" target="_blank" class="quick-contact-btn x-twitter"
+                                title="Follow on X (Twitter)">
+                                <svg class="x-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                                <span>X (Twitter)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container footer-container">
+            <p class="footer-copy">&copy; 2026 Gubendhiran J. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/GUBENDHIRAN2006" target="_blank">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                        <path
+                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                        <path d="M9 18c-4.51 2-5-2-7-2" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/gubendhiran-j-1abb302a3" target="_blank">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect width="4" height="12" x="2" y="9" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Admin Settings Panel (Only visible on localhost / local file system) -->
+    <div id="admin-settings-container" class="admin-settings-container hidden">
+        <!-- Floating Gear Button -->
+        <button id="admin-toggle-btn" class="admin-toggle-btn pulse-glow" title="Manage Certificates (Local Only)">
+            <i data-lucide="settings"></i>
+        </button>
+
+        <!-- Admin Modal -->
+        <div id="admin-modal" class="admin-modal hidden">
+            <div class="admin-modal-content premium-card">
+                <div class="admin-modal-header">
+                    <h3><i data-lucide="shield-check"></i> Admin Settings (Localhost Only)</h3>
+                    <button id="admin-close-btn" class="admin-close-btn"><i data-lucide="x"></i></button>
+                </div>
+                <div class="admin-modal-body">
+                    <p class="admin-info-note">
+                        <i data-lucide="info"></i>
+                        This settings panel is restricted to <strong>localhost</strong>. External visitors viewing your
+                        deployed portfolio will not be able to access this feature. Changes persist locally via Web
+                        Storage.
+                    </p>
+
+                    <!-- Tabs Navigation -->
+                    <div class="admin-tabs-nav">
+                        <button type="button" class="admin-tab-btn active" data-tab="tab-profile">
+                            <i data-lucide="user"></i> Photo
+                        </button>
+                        <button type="button" class="admin-tab-btn" data-tab="tab-projects">
+                            <i data-lucide="briefcase"></i> Projects
+                        </button>
+                        <button type="button" class="admin-tab-btn" data-tab="tab-internships">
+                            <i data-lucide="graduation-cap"></i> Internships
+                        </button>
+                        <button type="button" class="admin-tab-btn" data-tab="tab-achievements">
+                            <i data-lucide="award"></i> Achievements
+                        </button>
+                        <button type="button" class="admin-tab-btn" data-tab="tab-certificates">
+                            <i data-lucide="file-check-2"></i> Certificates
+                        </button>
+                    </div>
+
+                    <!-- Tab 1: Profile Photo -->
+                    <div id="tab-profile" class="admin-tab-content">
+                        <form id="profile-photo-form" class="admin-form">
+                            <h4 class="form-section-title">Manage Profile Photo</h4>
+                            <div class="form-group">
+                                <label for="profile-photo-file">Upload Profile Photo (Image only)</label>
+                                <input type="file" id="profile-photo-file" accept="image/*" required>
+                                <small class="file-note">Selecting a file will replace the interactive visual ring in
+                                    the Hero section with your profile photo.</small>
+                            </div>
+                            <div style="display: flex; gap: 12px; margin-top: 8px;">
+                                <button type="submit" class="btn btn-primary" style="flex: 1; padding: 10px 16px;">
+                                    <i data-lucide="upload"></i> Apply Photo
+                                </button>
+                                <button type="button" id="clear-profile-photo-btn" class="btn btn-secondary"
+                                    style="padding: 10px 16px;">
+                                    <i data-lucide="trash-2"></i> Reset
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Tab 2: Projects -->
+                    <div id="tab-projects" class="admin-tab-content hidden">
+                        <form id="add-project-form" class="admin-form">
+                            <h4 class="form-section-title">Add Project</h4>
+                            <div class="form-group">
+                                <label for="proj-title">Project Title *</label>
+                                <input type="text" id="proj-title" placeholder="e.g. AI Face Detector" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="proj-category">Category *</label>
+                                <select id="proj-category" required
+                                    style="padding: 12px 16px; border-radius: var(--radius-sm); background: var(--bg-secondary); border: 1px solid var(--border-light); font-size: 0.95rem; color: var(--text-main);">
+                                    <option value="python">Python</option>
+                                    <option value="ai-ml">AI & ML</option>
+                                    <option value="fullstack">Full Stack</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="proj-desc">Description *</label>
+                                <textarea id="proj-desc" rows="3" placeholder="Describe the project..."
+                                    required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="proj-tech">Technologies Used * (Comma-separated)</label>
+                                <input type="text" id="proj-tech" placeholder="e.g. Python, PyTorch, YOLOv8" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="proj-code">Source Code Link *</label>
+                                <input type="url" id="proj-code" placeholder="https://github.com/..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="proj-live">Live Demo Link (Optional)</label>
+                                <input type="url" id="proj-live" placeholder="https://...">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i data-lucide="plus"></i> Add Project
+                            </button>
+                        </form>
+                        <div class="admin-list-section">
+                            <h4 class="form-section-title">Manage Local Projects</h4>
+                            <ul id="admin-proj-list" class="admin-cert-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Internships -->
+                    <div id="tab-internships" class="admin-tab-content hidden">
+                        <form id="add-internship-form" class="admin-form">
+                            <h4 class="form-section-title">Add Internship</h4>
+                            <div class="form-group">
+                                <label for="intern-title">Company Name *</label>
+                                <input type="text" id="intern-title" placeholder="e.g. LearnFlu" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="intern-company">Role / Position *</label>
+                                <input type="text" id="intern-company" placeholder="e.g. AI & ML Intern" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="intern-duration">Duration *</label>
+                                <input type="text" id="intern-duration" placeholder="e.g. Jun 2025 – Sep 2025" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="intern-location">Location *</label>
+                                <input type="text" id="intern-location" placeholder="e.g. Bengaluru, India (Remote)"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="intern-bullets">Responsibilities * (One per line)</label>
+                                <textarea id="intern-bullets" rows="4"
+                                    placeholder="Enter role achievements, one per line..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="intern-file">Internship Certificate / Completion Letter (Image/PDF)</label>
+                                <input type="file" id="intern-file" accept="image/*,application/pdf">
+                                <small class="file-note">Optional. Upload your internship certificate/letter to view it
+                                    directly on the website.</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i data-lucide="plus"></i> Add Internship
+                            </button>
+                        </form>
+                        <div class="admin-list-section">
+                            <h4 class="form-section-title">Manage Local Internships</h4>
+                            <ul id="admin-intern-list" class="admin-cert-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4: Achievements -->
+                    <div id="tab-achievements" class="admin-tab-content hidden">
+                        <form id="add-achievement-form" class="admin-form">
+                            <h4 class="form-section-title">Add Achievement</h4>
+                            <div class="form-group">
+                                <label for="achieve-title">Achievement Name *</label>
+                                <input type="text" id="achieve-title" placeholder="e.g. Hackathon Winner" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="achieve-icon">Icon Style *</label>
+                                <select id="achieve-icon" required
+                                    style="padding: 12px 16px; border-radius: var(--radius-sm); background: var(--bg-secondary); border: 1px solid var(--border-light); font-size: 0.95rem; color: var(--text-main);">
+                                    <option value="trophy">Trophy</option>
+                                    <option value="code">Code</option>
+                                    <option value="award">Award</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="achieve-desc">Short Description *</label>
+                                <textarea id="achieve-desc" rows="3" placeholder="Describe the achievement..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i data-lucide="plus"></i> Add Achievement
+                            </button>
+                        </form>
+                        <div class="admin-list-section">
+                            <h4 class="form-section-title">Manage Local Achievements</h4>
+                            <ul id="admin-achieve-list" class="admin-cert-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Certificates -->
+                    <div id="tab-certificates" class="admin-tab-content hidden">
+                        <form id="add-certificate-form" class="admin-form">
+                            <h4 class="form-section-title">Add Certificate</h4>
+                            <div class="form-group">
+                                <label for="cert-title">Certificate Name *</label>
+                                <input type="text" id="cert-title" placeholder="e.g. Machine Learning Specialization"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cert-issuer">Issuing Organization *</label>
+                                <input type="text" id="cert-issuer" placeholder="e.g. DeepLearning.AI / Coursera"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cert-desc">Short Description *</label>
+                                <textarea id="cert-desc" rows="2"
+                                    placeholder="Describe the topics covered in this certification..."
+                                    required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="cert-link">Certificate Verification Link *</label>
+                                <input type="url" id="cert-link" placeholder="e.g. https://coursera.org/verify/..."
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cert-file">Local Certificate File (PDF/Image) *</label>
+                                <input type="file" id="cert-file" accept="image/*,application/pdf" required>
+                                <small class="file-note">Only actual files are accepted. Paths will reference your local
+                                    system environment.</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i data-lucide="plus"></i> Add Certificate
+                            </button>
+                        </form>
+                        <div class="admin-list-section">
+                            <h4 class="form-section-title">Manage Local Certificates</h4>
+                            <ul id="admin-cert-list" class="admin-cert-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document Viewer Modal (For viewing uploaded certificates/internship letters) -->
+    <div id="doc-viewer-modal" class="doc-viewer-modal hidden">
+        <div class="doc-viewer-content">
+            <div class="doc-viewer-header">
+                <h3 id="doc-viewer-title">Certificate Viewer</h3>
+                <button id="doc-viewer-close" class="doc-viewer-close"><i data-lucide="x"></i></button>
+            </div>
+            <div class="doc-viewer-body" id="doc-viewer-body">
+                <!-- Content will be injected dynamically (img or iframe) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script File -->
+    <script src="app.js"></script>
+</body>
+
+</html>
