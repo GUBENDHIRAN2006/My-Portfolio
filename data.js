@@ -1,21 +1,7 @@
 // This file contains the portfolio data. Do not edit directly unless you know what you are doing.
-const portfolioProfilePhoto = "uploads/profile_photo.jpg";
+const portfolioProfilePhoto = "uploads/profile_photo_1.jpg";
 
 const portfolioProjects = [
-    {
-        "title": "Real-Time Object Detection & Tracking",
-        "category": "ai-ml",
-        "description": "A highly optimized computer vision pipeline built with PyTorch, YOLOv8, and OpenCV. Capable of multi-object classification and tracking on dynamic video feeds with integrated GPU scheduling.",
-        "tech": [
-            "Python",
-            "PyTorch",
-            "YOLOv8",
-            "OpenCV",
-            "CUDA"
-        ],
-        "codeLink": "https://github.com",
-        "liveLink": "https://github.com"
-    },
     {
         "title": "Predictive Health Classification Engine",
         "category": "ai-ml",
@@ -44,34 +30,6 @@ const portfolioProjects = [
         "liveLink": "https://github.com"
     },
     {
-        "title": "Automated Data Ingestion & ETL Pipeline",
-        "category": "python",
-        "description": "A robust data scraping and processing crawler utilizing BeautifulSoup. Formulates dynamic relational datasets, performs validation, and ingestion into secure localized database setups.",
-        "tech": [
-            "Python",
-            "BeautifulSoup",
-            "SQLite",
-            "Git",
-            "Docker"
-        ],
-        "codeLink": "https://github.com",
-        "liveLink": "https://github.com"
-    },
-    {
-        "title": "Neural Canvas - Generative Image Platform",
-        "category": "fullstack",
-        "description": "Full-stack application presenting real-time generative models. Integrated PyTorch model hosting behind a responsive Flask backend, backed by structured SQLite data caching layers.",
-        "tech": [
-            "Python",
-            "Flask",
-            "PyTorch",
-            "SQLite",
-            "HTML/CSS/JS"
-        ],
-        "codeLink": "https://github.com",
-        "liveLink": "https://github.com"
-    },
-    {
         "title": "Predictive Task Automation Dashboard",
         "category": "fullstack",
         "description": "An interactive workflow planner incorporating historical task data to estimate delivery dates. Features highly aesthetic data visualizations, relational SQLite tracking, and structured user permissions.",
@@ -85,6 +43,47 @@ const portfolioProjects = [
         ],
         "codeLink": "https://github.com",
         "liveLink": "https://github.com"
+    },
+    {
+        "title": "Ai Traffic System Using Yolo",
+        "category": "ai-ml",
+        "description": "Ai System for traffic control it works based on the vehicle count and it also it detect the emergency vehicle and give to them a special way",
+        "tech": [
+            "python",
+            "YOLO",
+            "html",
+            "css"
+        ],
+        "codeLink": "https://github.com/GUBENDHIRAN2006/Ai-Traffic-System-Using-Yolo",
+        "liveLink": "https://github.com/GUBENDHIRAN2006/Ai-Traffic-System-Using-Yolo"
+    },
+    {
+        "title": "Emotional Recognition from Speech",
+        "category": "ai-ml",
+        "description": "Speech Emotion Recognition system using Deep Learning trained on the Toronto Emotional Speech Set (TESS). Extracts MFCC, Chroma, and Mel Spectrogram features and uses a CNN-based model for classification ",
+        "tech": [
+            "tesorflow",
+            "librosa",
+            "IPython",
+            "glob",
+            "soundfile",
+            "sounddevice"
+        ],
+        "codeLink": "https://github.com/GUBENDHIRAN2006/CodeAlpha_Emotion-Recognition-from-Speech",
+        "liveLink": "https://www.linkedin.com/posts/gubendhiran-j-1abb302a3_deeplearning-speechemotionrecognition-cnn-ugcPost-7463899745371983872-Qry4/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElQ6BMBz3jlAgdKWT5Pn6kAuQuJ9eYLsCI"
+    },
+    {
+        "title": "My-Portfolio",
+        "category": "fullstack",
+        "description": "I have created a website for my professanal website to showcase my skills and projects and anyone can see my website and anyone can contact me with that",
+        "tech": [
+            "Html",
+            "css",
+            "javascript",
+            "Node js"
+        ],
+        "codeLink": "https://github.com/GUBENDHIRAN2006/My-Portfolio",
+        "liveLink": "https://github.com/GUBENDHIRAN2006/My-Portfolio"
     }
 ];
 
@@ -115,4 +114,37 @@ const portfolioInternships = [
     }
 ];
 
-const portfolioCertificates = [];
+const portfolioCertificates = [
+    {
+        "title": "MySql Fundamendals",
+        "issuer": "Infosys ",
+        "description": "I successfully completed my 36h sql course in infosys",
+        "link": "https://drive.google.com/drive/u/0/home",
+        "fileData": "uploads/database_and_sql.pdf",
+        "fileName": "database and sql.pdf"
+    },
+    {
+        "title": "java fundamentals",
+        "issuer": "Infosys ",
+        "description": "I have successfully completed my 24h java course with hands on experience",
+        "link": "https://drive.google.com/drive/u/0/home",
+        "fileData": "uploads/java.pdf",
+        "fileName": "java.pdf"
+    },
+    {
+        "title": "Machine Learning using Python ",
+        "issuer": "Infosys ",
+        "description": "I have successfully completed my 24h java course with hands on experience and real time projects",
+        "link": "https://drive.google.com/drive/u/0/home",
+        "fileData": "uploads/ml_using_python__1___2_.pdf",
+        "fileName": "ml using python (1) (2).pdf"
+    },
+    {
+        "title": "Mastering Big Data Analytics with PySpark",
+        "issuer": "Infosys ",
+        "description": "I successfully completed my 36h bigdata course in infosys",
+        "link": "https://drive.google.com/drive/u/0/home",
+        "fileData": "uploads/big_data.pdf",
+        "fileName": "big data.pdf"
+    }
+];
