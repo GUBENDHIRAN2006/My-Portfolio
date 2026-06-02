@@ -130,21 +130,23 @@
                         <i data-lucide="brain-circuit"></i>
                     </div>
                     <h3>AI & ML Developer</h3>
-                    <p>Fascinated by predictive models and data-driven intelligence. I design, train, and optimize
-                        supervised and unsupervised architectures. Experienced in applying Deep Learning and Computer
-                        Vision algorithms (PyTorch, TensorFlow, YOLO, OpenCV) to engineer data and extract practical
-                        intelligence.</p>
+                    <p>I'm a passionate AI/ML Developer who enjoys turning data into meaningful
+                        insights and intelligent solutions. I love learning new technologies, solving
+                        real-world problems, and building projects that create a positive impact.
+                        My focus is on continuously growing my skills and contributing to innovative AI-driven
+                        applications..</p>
                 </div>
 
                 <div class="about-card premium-card">
                     <div class="card-icon-wrapper">
                         <i data-lucide="terminal"></i>
                     </div>
-                    <h3>Python Architect</h3>
-                    <p>Leveraging Python as my core development language. I build clean, high-performance backends,
-                        automate analytical scripts, and program GPU-accelerated computing modules using CUDA. Strong
-                        capability in handling numerical frameworks and deploying quick web-based interfaces with
-                        Streamlit and Flask.</p>
+                    <h3>Python Developer</h3>
+                    <p>I'm an enthusiastic Python Developer who enjoys solving problems and building
+                        applications using Python. With knowledge of Python fundamentals, Data Structures,
+                        and Advanced Python concepts, I am constantly learning and improving my coding skills.
+                        I am eager to apply my knowledge to create practical and innovative software solutions.
+                        .</p>
                 </div>
 
                 <div class="about-card premium-card">
@@ -152,9 +154,11 @@
                         <i data-lucide="layers"></i>
                     </div>
                     <h3>Full Stack Developer</h3>
-                    <p>Bridging the gap between intelligent algorithms and responsive user interfaces. I build
-                        interactive client applications backed by structured SQL/NoSQL databases, writing robust REST
-                        APIs and modular frontend logic to present data elegantly to end users.</p>
+                    <p>I'm an aspiring Full Stack Developer who loves building web applications from
+                        front-end design to back-end development. With skills in HTML, CSS, JavaScript,
+                        React, Node.js, FastAPI, and MySQL, I enjoy creating projects that solve real-world
+                        problems. I'm eager to learn, grow, and contribute to innovative software development teams.
+                        .</p>
                 </div>
             </div>
         </div>
@@ -241,8 +245,10 @@
                         <span class="skill-badge">Python</span>
                         <span class="skill-badge">Java</span>
                         <span class="skill-badge">R</span>
-                        <span class="skill-badge">SQL</span>
-                        <span class="skill-badge">MYSQL</span>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge">Java Script </span>
+
                     </div>
                 </div>
 
@@ -278,6 +284,9 @@
                         <span class="skill-badge">TensorFlow</span>
                         <span class="skill-badge">PyTorch</span>
                         <span class="skill-badge">YOLO</span>
+                        <span class="skill-badge">FastAPI</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Node JS</span>
                     </div>
                 </div>
 
@@ -579,7 +588,7 @@
                                 <i data-lucide="instagram"></i>
                                 <span>Instagram</span>
                             </a>
-                            <a href="https://x.com/gubendhiran" target="_blank" class="quick-contact-btn x-twitter"
+                            <a href="https://x.com/Gubendhiran1077" target="_blank" class="quick-contact-btn x-twitter"
                                 title="Follow on X (Twitter)">
                                 <svg class="x-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                                     <path
@@ -657,6 +666,9 @@
                         </button>
                         <button type="button" class="admin-tab-btn" data-tab="tab-certificates">
                             <i data-lucide="file-check-2"></i> Certificates
+                        </button>
+                        <button type="button" class="admin-tab-btn" data-tab="tab-save">
+                            <i data-lucide="save"></i> Save to Code
                         </button>
                     </div>
 
@@ -840,6 +852,75 @@
                             <ul id="admin-cert-list" class="admin-cert-list"></ul>
                         </div>
                     </div>
+
+                    <!-- Tab 6: Save to Code -->
+                    <div id="tab-save" class="admin-tab-content hidden">
+                        <div class="admin-form">
+                            <h4 class="form-section-title">Persist Changes to Code</h4>
+                            <p class="file-note" style="margin-bottom: 16px; line-height: 1.5;">
+                                To make your changes permanent and update your live webserver, you must save them back
+                                into the website's source code files.
+                            </p>
+
+                            <!-- Status Indicator -->
+                            <div id="save-status-indicator" class="admin-info-note"
+                                style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span id="server-status-dot"
+                                        style="width: 10px; height: 10px; border-radius: 50%; background: #9ca3af; display: inline-block;"></span>
+                                    <span id="server-status-text">Checking local server...</span>
+                                </div>
+                                <button type="button" id="btn-reconnect-server" class="btn btn-secondary"
+                                    style="padding: 4px 10px; font-size: 0.75rem;">
+                                    Retry Connection
+                                </button>
+                            </div>
+
+                            <!-- Action 1: Auto Save via Local Server -->
+                            <div class="save-option-card" id="save-option-server"
+                                style="border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 16px; background: rgba(124, 58, 237, 0.02); width: 100%;">
+                                <h5 style="margin-bottom: 8px; color: var(--text-main); font-weight: 600;">Option 1:
+                                    Auto-Save to Files (Recommended)</h5>
+                                <p class="file-note" style="margin-bottom: 12px; line-height: 1.4;">
+                                    If you run the local server, you can save your changes directly to the project files
+                                    (and extract uploaded files to the <code>uploads/</code> folder) with a single
+                                    click.
+                                </p>
+                                <div
+                                    style="background: var(--bg-secondary); padding: 10px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; margin-bottom: 12px; border: 1px solid var(--border-light); color: var(--text-muted); text-align: left;">
+                                    node server.js
+                                </div>
+                                <button type="button" id="btn-auto-save" class="btn btn-primary btn-full" disabled>
+                                    <i data-lucide="save" class="btn-icon"></i> Save Directly to Project
+                                </button>
+                            </div>
+
+                            <!-- Action 2: Manual Download -->
+                            <div class="save-option-card"
+                                style="border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 16px; background: rgba(124, 58, 237, 0.02); width: 100%;">
+                                <h5 style="margin-bottom: 8px; color: var(--text-main); font-weight: 600;">Option 2:
+                                    Download data.js (Manual)</h5>
+                                <p class="file-note" style="margin-bottom: 12px; line-height: 1.4;">
+                                    Download the updated data file and replace the existing <code>data.js</code> inside
+                                    your project directory.
+                                </p>
+                                <button type="button" id="btn-manual-download" class="btn btn-secondary btn-full">
+                                    <i data-lucide="download" class="btn-icon"></i> Download updated data.js
+                                </button>
+                            </div>
+
+                            <!-- Action 3: Reset local draft -->
+                            <div
+                                style="border-top: 1px solid var(--border-light); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <span class="file-note" style="max-width: 60%;">Discard browser drafts and reload from
+                                    current project files.</span>
+                                <button type="button" id="btn-reset-draft" class="btn btn-danger"
+                                    style="padding: 8px 16px; font-size: 0.85rem;">
+                                    <i data-lucide="refresh-cw" class="btn-icon"></i> Reset Draft
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -859,6 +940,7 @@
     </div>
 
     <!-- Custom Script File -->
+    <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
 

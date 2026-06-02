@@ -173,35 +173,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectGrid = document.getElementById('project-grid');
     const filterButtons = document.querySelectorAll('.filter-btn');
 
-    function getLocalProjects() {
-        const stored = localStorage.getItem('local_projects');
-        return stored ? JSON.parse(stored) : [];
+    function getActiveProjects() {
+        if (isLocal) {
+            const stored = localStorage.getItem('portfolio_draft_projects');
+            if (stored) return JSON.parse(stored);
+        }
+        return typeof portfolioProjects !== 'undefined' ? portfolioProjects : defaultProjects;
     }
 
     function saveLocalProject(proj) {
-        const current = getLocalProjects();
+        const current = getActiveProjects();
         current.push(proj);
-        localStorage.setItem('local_projects', JSON.stringify(current));
+        if (isLocal) {
+            localStorage.setItem('portfolio_draft_projects', JSON.stringify(current));
+        }
         const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
         renderProjects(activeFilter);
         renderAdminProjects();
+        updateSaveStatus(true);
     }
 
     function deleteLocalProject(index) {
-        const current = getLocalProjects();
+        const current = getActiveProjects();
         current.splice(index, 1);
-        localStorage.setItem('local_projects', JSON.stringify(current));
+        if (isLocal) {
+            localStorage.setItem('portfolio_draft_projects', JSON.stringify(current));
+        }
         const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
         renderProjects(activeFilter);
         renderAdminProjects();
+        updateSaveStatus(true);
     }
 
     function renderProjects(filterValue) {
         if (!projectGrid) return;
 
         projectGrid.innerHTML = '';
-        const localProjs = getLocalProjects();
-        const combined = [...defaultProjects, ...localProjs];
+        const combined = getActiveProjects();
 
         const filteredProjects = filterValue === 'all'
             ? combined
@@ -249,8 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    renderProjects('all');
-
     // Achievements Data & Persistence
     const defaultAchievements = [
         {
@@ -265,25 +271,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    function getLocalAchievements() {
-        const stored = localStorage.getItem('local_achievements');
-        return stored ? JSON.parse(stored) : [];
+    function getActiveAchievements() {
+        if (isLocal) {
+            const stored = localStorage.getItem('portfolio_draft_achievements');
+            if (stored) return JSON.parse(stored);
+        }
+        return typeof portfolioAchievements !== 'undefined' ? portfolioAchievements : defaultAchievements;
     }
 
     function saveLocalAchievement(ach) {
-        const current = getLocalAchievements();
+        const current = getActiveAchievements();
         current.push(ach);
-        localStorage.setItem('local_achievements', JSON.stringify(current));
+        if (isLocal) {
+            localStorage.setItem('portfolio_draft_achievements', JSON.stringify(current));
+        }
         renderAchievements();
         renderAdminAchievements();
+        updateSaveStatus(true);
     }
 
     function deleteLocalAchievement(index) {
-        const current = getLocalAchievements();
+        const current = getActiveAchievements();
         current.splice(index, 1);
-        localStorage.setItem('local_achievements', JSON.stringify(current));
+        if (isLocal) {
+            localStorage.setItem('portfolio_draft_achievements', JSON.stringify(current));
+        }
         renderAchievements();
         renderAdminAchievements();
+        updateSaveStatus(true);
     }
 
     function renderAchievements() {
@@ -291,8 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!achievementsList) return;
         achievementsList.innerHTML = '';
 
-        const localAchs = getLocalAchievements();
-        const combined = [...defaultAchievements, ...localAchs];
+        const combined = getActiveAchievements();
 
         combined.forEach(ach => {
             const item = document.createElement('div');
@@ -329,25 +343,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    function getLocalInternships() {
-        const stored = localStorage.getItem('local_internships');
-        return stored ? JSON.parse(stored) : [];
+    function getActiveInternships() {
+        if (isLocal) {
+            const stored = localStorage.getItem('portfolio_draft_internships');
+            if (stored) return JSON.parse(stored);
+        }
+        return typeof portfolioInternships !== 'undefined' ? portfolioInternships : defaultInternships;
     }
 
     function saveLocalInternship(intern) {
-        const current = getLocalInternships();
+        const current = getActiveInternships();
         current.push(intern);
-        localStorage.setItem('local_internships', JSON.stringify(current));
+        if (isLocal) {
+            localStorage.setItem('portfolio_draft_internships', JSON.stringify(current));
+        }
         renderInternships();
         renderAdminInternships();
+        updateSaveStatus(true);
     }
 
     function deleteLocalInternship(index) {
-        const current = getLocalInternships();
+        const current = getActiveInternships();
         current.splice(index, 1);
-        localStorage.setItem('local_internships', JSON.stringify(current));
+        if (isLocal) {
+            localStorage.setItem('portfolio_draft_internships', JSON.stringify(current));
+        }
         renderInternships();
         renderAdminInternships();
+        updateSaveStatus(true);
     }
 
     function renderInternships() {
@@ -355,8 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!internshipContainer) return;
         internshipContainer.innerHTML = '';
 
-        const localInterns = getLocalInternships();
-        const combined = [...defaultInternships, ...localInterns];
+        const combined = getActiveInternships();
 
         combined.forEach(intern => {
             const card = document.createElement('div');
@@ -419,11 +441,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const certificatesGrid = document.getElementById('certificates-grid');
 
     // Profile Photo Rendering Engine
+    function getActiveProfilePhoto() {
+        if (isLocal) {
+            const stored = localStorage.getItem('portfolio_draft_profile_photo');
+            if (stored !== null) return stored;
+        }
+        return typeof portfolioProfilePhoto !== 'undefined' ? portfolioProfilePhoto : "";
+    }
+
     function renderProfilePhoto() {
         const heroVisualContainer = document.getElementById('hero-visual-container');
         if (!heroVisualContainer) return;
 
-        const storedPhoto = localStorage.getItem('local_profile_photo');
+        const storedPhoto = getActiveProfilePhoto();
         if (storedPhoto) {
             heroVisualContainer.innerHTML = `
                 <div class="custom-avatar-wrapper">
@@ -462,33 +492,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    function getLocalCertificates() {
-        const stored = localStorage.getItem('local_certificates');
-        return stored ? JSON.parse(stored) : [];
+    function getActiveCertificates() {
+        if (isLocal) {
+            const stored = localStorage.getItem('portfolio_draft_certificates');
+            if (stored) return JSON.parse(stored);
+        }
+        return typeof portfolioCertificates !== 'undefined' ? portfolioCertificates : defaultCertificates;
     }
 
     function saveLocalCertificate(cert) {
-        const current = getLocalCertificates();
+        const current = getActiveCertificates();
         current.push(cert);
-        localStorage.setItem('local_certificates', JSON.stringify(current));
+        if (isLocal) {
+            localStorage.setItem('portfolio_draft_certificates', JSON.stringify(current));
+        }
         renderAllCertificates();
         renderAdminList();
+        updateSaveStatus(true);
     }
 
     function deleteLocalCertificate(index) {
-        const current = getLocalCertificates();
+        const current = getActiveCertificates();
         current.splice(index, 1);
-        localStorage.setItem('local_certificates', JSON.stringify(current));
+        if (isLocal) {
+            localStorage.setItem('portfolio_draft_certificates', JSON.stringify(current));
+        }
         renderAllCertificates();
         renderAdminList();
+        updateSaveStatus(true);
     }
 
     function renderAllCertificates() {
         if (!certificatesGrid) return;
         certificatesGrid.innerHTML = '';
 
-        const localCerts = getLocalCertificates();
-        const combined = [...defaultCertificates, ...localCerts];
+        const combined = getActiveCertificates();
 
         combined.forEach(cert => {
             const card = document.createElement('div');
@@ -513,14 +551,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderAdminList() {
         if (!adminCertList) return;
         adminCertList.innerHTML = '';
-        const localCerts = getLocalCertificates();
+        const activeCerts = getActiveCertificates();
 
-        if (localCerts.length === 0) {
-            adminCertList.innerHTML = '<li class="admin-info-note">No local certificates added yet.</li>';
+        if (activeCerts.length === 0) {
+            adminCertList.innerHTML = '<li class="admin-info-note">No certificates. Add one above!</li>';
             return;
         }
 
-        localCerts.forEach((cert, index) => {
+        activeCerts.forEach((cert, index) => {
             const li = document.createElement('li');
             li.className = 'admin-cert-item';
             li.innerHTML = `
@@ -551,14 +589,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const adminProjList = document.getElementById('admin-proj-list');
         if (!adminProjList) return;
         adminProjList.innerHTML = '';
-        const localProjs = getLocalProjects();
+        const activeProjs = getActiveProjects();
 
-        if (localProjs.length === 0) {
-            adminProjList.innerHTML = '<li class="admin-info-note">No local projects added yet.</li>';
+        if (activeProjs.length === 0) {
+            adminProjList.innerHTML = '<li class="admin-info-note">No projects. Add one above!</li>';
             return;
         }
 
-        localProjs.forEach((proj, index) => {
+        activeProjs.forEach((proj, index) => {
             const li = document.createElement('li');
             li.className = 'admin-cert-item';
             li.innerHTML = `
@@ -589,14 +627,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const adminInternList = document.getElementById('admin-intern-list');
         if (!adminInternList) return;
         adminInternList.innerHTML = '';
-        const localInterns = getLocalInternships();
+        const activeInterns = getActiveInternships();
 
-        if (localInterns.length === 0) {
-            adminInternList.innerHTML = '<li class="admin-info-note">No local internships added yet.</li>';
+        if (activeInterns.length === 0) {
+            adminInternList.innerHTML = '<li class="admin-info-note">No internships. Add one above!</li>';
             return;
         }
 
-        localInterns.forEach((intern, index) => {
+        activeInterns.forEach((intern, index) => {
             const li = document.createElement('li');
             li.className = 'admin-cert-item';
             li.innerHTML = `
@@ -627,14 +665,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const adminAchieveList = document.getElementById('admin-achieve-list');
         if (!adminAchieveList) return;
         adminAchieveList.innerHTML = '';
-        const localAchs = getLocalAchievements();
+        const activeAchs = getActiveAchievements();
 
-        if (localAchs.length === 0) {
-            adminAchieveList.innerHTML = '<li class="admin-info-note">No local achievements added yet.</li>';
+        if (activeAchs.length === 0) {
+            adminAchieveList.innerHTML = '<li class="admin-info-note">No achievements. Add one above!</li>';
             return;
         }
 
-        localAchs.forEach((ach, index) => {
+        activeAchs.forEach((ach, index) => {
             const li = document.createElement('li');
             li.className = 'admin-cert-item';
             li.innerHTML = `
@@ -658,6 +696,148 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         lucide.createIcons();
+    }
+
+    // Save indicator / server synchronization functions
+    let isServerConnected = false;
+    const serverUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? (window.location.port === '3000' ? '' : 'http://localhost:3000')
+        : 'http://localhost:3000';
+
+    function checkServerConnection() {
+        const dot = document.getElementById('server-status-dot');
+        const text = document.getElementById('server-status-text');
+        const autoSaveBtn = document.getElementById('btn-auto-save');
+
+        if (!dot || !text) return;
+
+        dot.style.background = '#9ca3af';
+        text.textContent = 'Checking local server connection...';
+        if (autoSaveBtn) autoSaveBtn.disabled = true;
+
+        fetch(`${serverUrl}/api/status`)
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.running) {
+                    isServerConnected = true;
+                    dot.style.background = '#10b981';
+                    text.innerHTML = '<strong>Local Server Connected</strong> (Running on port 3000)';
+                    if (autoSaveBtn) autoSaveBtn.disabled = false;
+                } else {
+                    throw new Error('Not running');
+                }
+            })
+            .catch(err => {
+                isServerConnected = false;
+                dot.style.background = '#ef4444';
+                text.innerHTML = '<strong>Local Server Disconnected</strong> (Run <code>node server.js</code>)';
+                if (autoSaveBtn) autoSaveBtn.disabled = true;
+            });
+    }
+
+    function hasUnsavedChanges() {
+        return localStorage.getItem('portfolio_draft_projects') !== null ||
+            localStorage.getItem('portfolio_draft_achievements') !== null ||
+            localStorage.getItem('portfolio_draft_internships') !== null ||
+            localStorage.getItem('portfolio_draft_certificates') !== null ||
+            localStorage.getItem('portfolio_draft_profile_photo') !== null;
+    }
+
+    function updateSaveStatus(hasChanges) {
+        const saveTabBtn = document.querySelector('.admin-tab-btn[data-tab="tab-save"]');
+        if (saveTabBtn) {
+            if (hasChanges) {
+                saveTabBtn.innerHTML = '<i data-lucide="save"></i> Save to Code <span class="unsaved-badge" style="background:#db2777; width:8px; height:8px; border-radius:50%; display:inline-block; margin-left:4px;" title="Unsaved changes"></span>';
+            } else {
+                saveTabBtn.innerHTML = '<i data-lucide="save"></i> Save to Code';
+            }
+            lucide.createIcons();
+        }
+    }
+
+    function handleAutoSave() {
+        const autoSaveBtn = document.getElementById('btn-auto-save');
+        const originalText = autoSaveBtn.innerHTML;
+        autoSaveBtn.disabled = true;
+        autoSaveBtn.innerHTML = '<i data-lucide="loader-2" class="btn-icon animate-spin" style="animation: spin 1s linear infinite;"></i> Saving...';
+        lucide.createIcons();
+
+        const payload = {
+            profilePhoto: getActiveProfilePhoto(),
+            projects: getActiveProjects(),
+            achievements: getActiveAchievements(),
+            internships: getActiveInternships(),
+            certificates: getActiveCertificates()
+        };
+
+        fetch(`${serverUrl}/api/save`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to save');
+                return res.json();
+            })
+            .then(data => {
+                alert('Successfully saved changes directly to project files!');
+                localStorage.removeItem('portfolio_draft_projects');
+                localStorage.removeItem('portfolio_draft_achievements');
+                localStorage.removeItem('portfolio_draft_internships');
+                localStorage.removeItem('portfolio_draft_certificates');
+                localStorage.removeItem('portfolio_draft_profile_photo');
+                window.location.reload();
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Failed to save to local server. Make sure node server.js is running.');
+                autoSaveBtn.disabled = false;
+                autoSaveBtn.innerHTML = originalText;
+                lucide.createIcons();
+            });
+    }
+
+    function handleManualDownload() {
+        const profilePhoto = getActiveProfilePhoto();
+        const projects = getActiveProjects();
+        const achievements = getActiveAchievements();
+        const internships = getActiveInternships();
+        const certificates = getActiveCertificates();
+
+        const content = `// This file contains the portfolio data. Do not edit directly unless you know what you are doing.
+const portfolioProfilePhoto = ${JSON.stringify(profilePhoto, null, 4)};
+
+const portfolioProjects = ${JSON.stringify(projects, null, 4)};
+
+const portfolioAchievements = ${JSON.stringify(achievements, null, 4)};
+
+const portfolioInternships = ${JSON.stringify(internships, null, 4)};
+
+const portfolioCertificates = ${JSON.stringify(certificates, null, 4)};
+`;
+
+        const blob = new Blob([content], { type: 'application/javascript' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'data.js';
+        a.click();
+        URL.revokeObjectURL(url);
+
+        alert('Your updated "data.js" file is downloading!\n\nPlease save it in your project directory (overwriting the existing one), then click "Reset Draft" to sync and reload.');
+    }
+
+    function handleResetDraft() {
+        if (confirm('Are you sure you want to discard your local staging changes and reload the data from your project files?')) {
+            localStorage.removeItem('portfolio_draft_projects');
+            localStorage.removeItem('portfolio_draft_achievements');
+            localStorage.removeItem('portfolio_draft_internships');
+            localStorage.removeItem('portfolio_draft_certificates');
+            localStorage.removeItem('portfolio_draft_profile_photo');
+            window.location.reload();
+        }
     }
 
     if (isLocal) {
@@ -706,6 +886,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (tabId === 'tab-internships') renderAdminInternships();
                 if (tabId === 'tab-achievements') renderAdminAchievements();
                 if (tabId === 'tab-certificates') renderAdminList();
+                if (tabId === 'tab-save') checkServerConnection();
             });
         });
 
@@ -750,10 +931,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         const compressedBase64 = canvas.toDataURL('image/jpeg', 0.75);
 
                         try {
-                            localStorage.setItem('local_profile_photo', compressedBase64);
+                            localStorage.setItem('portfolio_draft_profile_photo', compressedBase64);
                             renderProfilePhoto();
                             profilePhotoForm.reset();
                             adminModal.classList.add('hidden');
+                            updateSaveStatus(true);
                         } catch (error) {
                             console.error("Storage error:", error);
                             alert("Storage quota exceeded. Please select a smaller photo.");
@@ -767,9 +949,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (clearProfilePhotoBtn) {
             clearProfilePhotoBtn.addEventListener('click', () => {
-                localStorage.removeItem('local_profile_photo');
+                localStorage.setItem('portfolio_draft_profile_photo', "");
                 renderProfilePhoto();
                 adminModal.classList.add('hidden');
+                updateSaveStatus(true);
             });
         }
 
@@ -889,8 +1072,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 reader.readAsDataURL(file);
             });
         }
+
+        // Save Tab Button Listeners
+        const reconnectBtn = document.getElementById('btn-reconnect-server');
+        if (reconnectBtn) {
+            reconnectBtn.addEventListener('click', checkServerConnection);
+        }
+
+        const autoSaveBtn = document.getElementById('btn-auto-save');
+        if (autoSaveBtn) {
+            autoSaveBtn.addEventListener('click', handleAutoSave);
+        }
+
+        const manualDownloadBtn = document.getElementById('btn-manual-download');
+        if (manualDownloadBtn) {
+            manualDownloadBtn.addEventListener('click', handleManualDownload);
+        }
+
+        const resetDraftBtn = document.getElementById('btn-reset-draft');
+        if (resetDraftBtn) {
+            resetDraftBtn.addEventListener('click', handleResetDraft);
+        }
+
+        // Initialize status
+        checkServerConnection();
+        updateSaveStatus(hasUnsavedChanges());
     }
 
+    renderProjects('all');
     renderAllCertificates();
     renderProfilePhoto();
     renderAchievements();

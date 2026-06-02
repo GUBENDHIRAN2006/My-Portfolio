@@ -197,6 +197,32 @@ select {
     width: 100%;
 }
 
+.btn-danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.btn-danger:hover {
+    background: #ef4444;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Pulse Glow Highlight Animation for Hire Me button */
 .pulse-glow {
     position: relative;
