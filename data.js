@@ -73,7 +73,21 @@ const portfolioProjects = [
         "liveLink": "https://www.linkedin.com/posts/gubendhiran-j-1abb302a3_deeplearning-speechemotionrecognition-cnn-ugcPost-7463899745371983872-Qry4/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElQ6BMBz3jlAgdKWT5Pn6kAuQuJ9eYLsCI"
     },
     {
-        "title": "My-Portfolio",
+        "title": "Ai PrepMaster App",
+        "category": "fullstack",
+        "description": "🚀 Built with React.js (Vite) + FastAPI + Supabase, seamlessly integrated with OpenAI API and JWT authentication.\n☁️ Deployed across Vercel (frontend), Render (backend), and Supabase (database) for scalable cloud management.\n✨ Offers AI‑powered interview prep, resume analysis, coding challenges, chatbot simulations, and performance analytics.",
+        "tech": [
+            "Frontend: React.js + Vite",
+            "Backend: FastAPI (Python)",
+            "Database: Supabase PostgreSQL",
+            "AI Integration: OpenAI API",
+            "Authentication: JWT"
+        ],
+        "codeLink": "https://github.com/GUBENDHIRAN2006/Ai-PrepMaster-App",
+        "liveLink": "https://ai-prep-master-app.vercel.app/"
+    },
+    {
+        "title": "My Portfolio",
         "category": "fullstack",
         "description": "I have created a website for my professanal website to showcase my skills and projects and anyone can see my website and anyone can contact me with that",
         "tech": [
@@ -83,7 +97,7 @@ const portfolioProjects = [
             "Node js"
         ],
         "codeLink": "https://github.com/GUBENDHIRAN2006/My-Portfolio",
-        "liveLink": "https://github.com/GUBENDHIRAN2006/My-Portfolio"
+        "liveLink": "https://my-new-portfolio-mu.vercel.app/"
     }
 ];
 
