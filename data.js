@@ -3,20 +3,6 @@ const portfolioProfilePhoto = "uploads/profile_photo_1.jpg";
 
 const portfolioProjects = [
     {
-        "title": "Predictive Health Classification Engine",
-        "category": "ai-ml",
-        "description": "Developed machine learning predictive models implementing supervised training (Random Forests, Gradient Boosting) for complex analytical metrics. Achieved high accuracy with robust feature engineering.",
-        "tech": [
-            "Python",
-            "Scikit-Learn",
-            "Matplotlib",
-            "Seaborn",
-            "Pandas"
-        ],
-        "codeLink": "https://github.com",
-        "liveLink": "https://github.com"
-    },
-    {
         "title": "High-Performance GPU Computing Core",
         "category": "python",
         "description": "Custom GPU simulation matrices programmed using PyCUDA. Designed to execute massive numerical computations and matrix operations, maximizing thread efficiency and memory access speeds.",
@@ -28,34 +14,6 @@ const portfolioProjects = [
         ],
         "codeLink": "https://github.com",
         "liveLink": "https://github.com"
-    },
-    {
-        "title": "Predictive Task Automation Dashboard",
-        "category": "fullstack",
-        "description": "An interactive workflow planner incorporating historical task data to estimate delivery dates. Features highly aesthetic data visualizations, relational SQLite tracking, and structured user permissions.",
-        "tech": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Flask",
-            "MySQL",
-            "Seaborn"
-        ],
-        "codeLink": "https://github.com",
-        "liveLink": "https://github.com"
-    },
-    {
-        "title": "Ai Traffic System Using Yolo",
-        "category": "ai-ml",
-        "description": "Ai System for traffic control it works based on the vehicle count and it also it detect the emergency vehicle and give to them a special way",
-        "tech": [
-            "python",
-            "YOLO",
-            "html",
-            "css"
-        ],
-        "codeLink": "https://github.com/GUBENDHIRAN2006/Ai-Traffic-System-Using-Yolo",
-        "liveLink": "https://github.com/GUBENDHIRAN2006/Ai-Traffic-System-Using-Yolo"
     },
     {
         "title": "Emotional Recognition from Speech",
@@ -98,6 +56,33 @@ const portfolioProjects = [
         ],
         "codeLink": "https://github.com/GUBENDHIRAN2006/My-Portfolio",
         "liveLink": "https://my-new-portfolio-mu.vercel.app/"
+    },
+    {
+        "title": "Ai Traffic System Using Yolo",
+        "category": "ai-ml",
+        "description": "Ai System for traffic control it works based on the vehicle count and it also it detects the emergency vehicle and give to them a special way",
+        "tech": [
+            "Python",
+            "OpenCV",
+            "DL",
+            "YOLO",
+            "Html",
+            "Css"
+        ],
+        "codeLink": "https://github.com/GUBENDHIRAN2006/Ai-Traffic-System-Using-Yolo",
+        "liveLink": "https://www.linkedin.com/posts/gubendhiran-j-1abb302a3_artificialintelligence-machinelearning-smarttraffic-ugcPost-7411426252328230913--JUC/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElQ6BMBz3jlAgdKWT5Pn6kAuQuJ9eYLsCI"
+    },
+    {
+        "title": "Brain Tumor Classifier",
+        "category": "ai-ml",
+        "description": "The Brain Tumor Classifier is a machine learning project that analyzes MRI images to detect and classify brain tumors. It helps doctors with early diagnosis by providing fast and accurate tumor identification.",
+        "tech": [
+            "DL",
+            "Tensorflow",
+            "Keras"
+        ],
+        "codeLink": "https://github.com/GUBENDHIRAN2006/Brain-tumor-classifier",
+        "liveLink": "https://github.com/GUBENDHIRAN2006/Brain-tumor-classifier"
     }
 ];
 
