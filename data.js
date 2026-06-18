@@ -3,19 +3,6 @@ const portfolioProfilePhoto = "uploads/profile_photo_1.jpg";
 
 const portfolioProjects = [
     {
-        "title": "High-Performance GPU Computing Core",
-        "category": "python",
-        "description": "Custom GPU simulation matrices programmed using PyCUDA. Designed to execute massive numerical computations and matrix operations, maximizing thread efficiency and memory access speeds.",
-        "tech": [
-            "Python",
-            "CUDA",
-            "GPU Programming",
-            "Jupyter"
-        ],
-        "codeLink": "https://github.com",
-        "liveLink": "https://github.com"
-    },
-    {
         "title": "Emotional Recognition from Speech",
         "category": "ai-ml",
         "description": "Speech Emotion Recognition system using Deep Learning trained on the Toronto Emotional Speech Set (TESS). Extracts MFCC, Chroma, and Mel Spectrogram features and uses a CNN-based model for classification ",
@@ -83,6 +70,21 @@ const portfolioProjects = [
         ],
         "codeLink": "https://github.com/GUBENDHIRAN2006/Brain-tumor-classifier",
         "liveLink": "https://github.com/GUBENDHIRAN2006/Brain-tumor-classifier"
+    },
+    {
+        "title": "Safora App",
+        "category": "fullstack",
+        "description": "Safora – App\n\nDeveloped a healthcare mobile application that monitors user health metrics such as Heart Rate, Blood Pressure, SpO₂, Steps, and Sleep Data through Health Connect integration. The app detects potential health emergencies in real time and automatically sends SMS alerts, emergency calls, and live GPS location to emergency contacts. Built with React Native, FastAPI, Supabase, Firebase, and Google Maps API, featuring secure authentication, background monitoring, and real-time emergency response capabilities.\n",
+        "tech": [
+            "React Native",
+            "TypeScript",
+            "FastAPI",
+            "Supabase PostgreSQL",
+            "Google Maps API",
+            "JWT"
+        ],
+        "codeLink": "https://www.linkedin.com/posts/gubendhiran-j-1abb302a3_reactnative-fastapi-healthtech-share-7473326468404523008-2pqC/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElQ6BMBz3jlAgdKWT5Pn6kAuQuJ9eYLsCI",
+        "liveLink": "https://drive.google.com/file/d/1b_WFPg2UWOhMT3uASm19WVGhH2ckzNYG/view"
     }
 ];
 
