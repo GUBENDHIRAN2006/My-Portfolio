@@ -84,7 +84,7 @@ const portfolioProjects = [
             "JWT"
         ],
         "codeLink": "https://www.linkedin.com/posts/gubendhiran-j-1abb302a3_reactnative-fastapi-healthtech-share-7473326468404523008-2pqC/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElQ6BMBz3jlAgdKWT5Pn6kAuQuJ9eYLsCI",
-        "liveLink": "https://drive.google.com/file/d/1b_WFPg2UWOhMT3uASm19WVGhH2ckzNYG/view"
+        "liveLink": "https://drive.google.com/file/d/1WmxSbWALFFdHwF4_jFbBA7yELyuxhXwl/view?usp=drive_link"
     }
 ];
 
