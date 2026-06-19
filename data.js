@@ -112,6 +112,17 @@ const portfolioInternships = [
             "Implemented custom preprocessing pipelines, handled missing data, and developed predictive architectures using standard scientific libraries.",
             "Employed regression, classification, and validation methods to improve reliability and model outputs."
         ]
+    },
+    {
+        "title": "CodeAlpha",
+        "company": "Ai & Ml intern",
+        "duration": "May 2026 - Jun 2026",
+        "location": "Virtual ",
+        "bullets": [
+            "Successfully completed a Machine Learning Virtual Internship at CodeAlpha (May–June 2026).Gained hands‑on experience in ML concepts, problem‑solving, and project implementation.Recognized for dedication, active participation, and consistent performance."
+        ],
+        "fileData": "uploads/Gubendhiran_J__2_.pdf",
+        "fileName": "Gubendhiran J (2).pdf"
     }
 ];
 
