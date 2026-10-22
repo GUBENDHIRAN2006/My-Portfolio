@@ -1,5 +1,5 @@
 // This file contains the portfolio data. Do not edit directly unless you know what you are doing.
-const portfolioProfilePhoto = "uploads/profile_photo_1.jpg";
+const portfolioProfilePhoto = "uploads/profile_photo_2.jpg";
 
 const portfolioProjects = [
     {
