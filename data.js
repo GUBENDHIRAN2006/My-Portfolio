@@ -85,6 +85,24 @@ const portfolioProjects = [
         ],
         "codeLink": "https://www.linkedin.com/posts/gubendhiran-j-1abb302a3_reactnative-fastapi-healthtech-share-7473326468404523008-2pqC/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAElQ6BMBz3jlAgdKWT5Pn6kAuQuJ9eYLsCI",
         "liveLink": "https://drive.google.com/file/d/1WmxSbWALFFdHwF4_jFbBA7yELyuxhXwl/view?usp=drive_link"
+    },
+    {
+        "title": "Ai Data Analyst",
+        "category": "ai-ml",
+        "description": "AI Agent for Data Analysis is an AI-powered application that analyzes CSV, Excel, and PDF files and connects to PostgreSQL, MySQL, Supabase, and MongoDB. Users can ask questions in natural language and receive automated data insights, statistical summaries, interactive charts, and clear explanations.\n\nKey Features:\n- Multi-format file analysis.\n- Connectivity to four database platforms.\n- Natural-language querying using AI agents.\n- Automated data analysis and visualization.\n- Secure connections and read-only query execution.\n- Automated testing and evaluation.",
+        "tech": [
+            "Python",
+            "FastAPI",
+            "OpenAI API",
+            "AI Agents & Tool Calling",
+            "Pandas",
+            "NumPy",
+            "Plotly",
+            "Pytest",
+            "Docker"
+        ],
+        "codeLink": "https://github.com/GUBENDHIRAN2006/AIDataAnalyst",
+        "liveLink": "https://ai-data-analyst-kappa-three.vercel.app/"
     }
 ];
 
